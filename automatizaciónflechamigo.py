@@ -6,13 +6,13 @@ from email.mime.image import MIMEImage
 
 # Tus credenciales
 mi_correo = "flechamigo@flecharoja.com.mx"
-mi_password = "wfsqmjlttxspwzxa" # No es tu contraseña normal
+mi_password = "wfsqmjlttxspwzxa" # No es mi contraseña normal, sale de myaccount.google.com/apppasswords
 
 # Leer Excel
 df = pd.read_excel('control_datos_email.xlsx')
 # Elimina las filas donde la columna 'Correo' esté vacía (los 'nan')
 df = df.dropna(subset=['CORREO'])
-nombre_imagen = "unnamed-9.png" # Asegúrate de que el nombre sea exacto
+nombre_imagen = "unnamed-10.png" # Asegúrate de que el nombre sea exacto
 
 try:
     servidor = smtplib.SMTP('smtp.gmail.com', 587)
@@ -29,7 +29,7 @@ try:
         
         # Si es uno solo, déjalo así: "tu_jefe@flecharoja.com.mx"
         # Si son varios, sepáralos por comas: "correo1@test.com, correo2@test.com"
-        correos_ocultos = "omar.padilla@flecharoja.com.mx, jessica.perez@flecharoja.com.mx, efsoto@cemcomx.com, flechamigo@flecharoja.com.mx, eduardo.macedo@flecharoja.com.mx"
+        correos_ocultos = "omar.padilla@flecharoja.com.mx, jessica.perez@flecharoja.com.mx, efsoto@cemcomx.com, flechamigo@flecharoja.com.mx"
         #"omar.padilla@flecharoja.com.mx, jessica.perez@flecharoja.com.mx, efsoto@cemcomx.com, flechamigo@flecharoja.com.mx, eduardo.macedo@flecharoja.com.mx"
         # OJO: Usamos 'related' para que el correo entienda que lleva imágenes incrustadas
         msg = MIMEMultipart('related')
@@ -48,16 +48,43 @@ try:
         <html>
           <body style="font-family: Arial, sans-serif; color: #12724C;">
             <p>¡Hola, <strong>{nombre}</strong>!</p>
-            <p>Esperamos que estés teniendo un excelente día. Te escribimos porque notamos que te falta un pequeño paso para completar tu registro. ¡Es más fácil de lo que crees!</p>
-            <p><strong>¿Qué sigue?</strong><br>
-            Date una vuelta por nuestro módulo de atención (TOLUCA Y CDMX PONIENTE). Menciona tu folio personalizado <strong>{folio}</strong> a nuestra ejecutiva de atención.<br>
-            Muestra tu identificación (INE) a nuestras ejecutivas de atención para corroborar tus datos. Completamos tu registro en tan solo unos minutos.</p>
+            <p>Todo gran recorrido comienza con un primer paso, y tú ya diste el tuyo al unirte a Flechamigo</p>
+            <p>Tu folio de kit es: <strong>{folio}</strong></p>
+
+            <p><strong>Comenzamos premiando tu confianza con un 5% de descuento, y gracias a la respuesta y entusiasmo de
+            usuarios como tú, hoy ese beneficio ha crecido a un 10% de descuento en tus viajes.  Válido para dos
+            viajes diarios a cualquier destino. Aplican Términos y Condiciones. Consultalos en:</p>
+            <p><strong>https://flecharoja.com.mx/terminos_y_condiciones_2026.pdf</strong><br>
+            <p>Queremos que formes parte de esta evolución y disfrutes de un programa pensado para reconocer tu preferencia, brindándote más beneficios y mejores experiencias en cada trayecto.</p>
+
+            <br>¡No dejes pasar esta oportunidad! Tu registro está a un paso de completarse.<br>
+
+            <br>Concluir tu registro es muy sencillo:<br>
+
+            <br><strong>Visita nuestro módulo de atención.
+            Menciona tu folio personalizado.
+            Presenta tu identificación oficial (INE) para validar tus datos.
+            En pocos minutos finalizamos tu registro y recibirás tu kit de bienvenida.</strong><br>
+
+            <br>¿No sabes dónde se encuentra nuestro módulo o cuáles son nuestros horarios de atención?
+            ¡Escríbenos y con gusto te ayudaremos!<br>
+
+            <br><strong>Recuerda: tienes hasta el 31 de Agosto de 2026 para concluir tu registro y obtener tu kit de bienvenida.</strong><br>
+
+            <br>Estamos listos para darte la bienvenida a la comunidad Flechamigo, donde cada viaje te acercará a más beneficios, experiencias y recompensas.<br>
+
+            <br><strong>¡Completa tu registro y comienza a disfrutar de tu 10% de descuento hoy mismo!</strong><br>
+
+            <br>"Acercándote cada vez más"<br>
+
+            <br>Saludos cordiales,
+            Equipo Flechamigo<br>
             
-            <br>
+            
             <img src="cid:imagen_banner" alt="Banner Flechamigo" style="max-width: 100%; height: auto;">
-            <br>
             
-            <p>Si no sabes dónde nos encontramos o en qué horario atendemos, ¡escríbenos y te ayudamos!</p>
+            
+            <p><strong>Si no sabes dónde nos encontramos o en qué horario atendemos, ¡escríbenos y te ayudamos!</strong></p>
             <p>¡Te esperamos pronto!<br>
             <em>'Acercándote cada vez más'</em><br>
             Saludos,</p>
