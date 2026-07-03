@@ -3,9 +3,9 @@ import webbrowser
 import pyperclip
 from time import sleep
 
-destinatario = "analista.ia@cemcomx.com"
-asunto = "prueba"
-cuerpo = "Hola, este es un correo de prueba enviado desde Python utilizando el módulo webbrowser. ¡Espero que funcione correctamente!"
+destinatario = "omar.padilla@flecharoja.com.mx"
+asunto = "Tu tarjeta Flechamigo quiere viajar contigo"
+cuerpo = "¡Hola, FLECHAMIGO!Esperamos que estés teniendo un excelente día. Te escribimos porque notamos que te falta un pequeño paso para completar tu registro. ¡Es más fácil de lo que crees!¿Qué sigue?Date una vuelta por nuestro módulo de atención(TOLUCA Y CDMX PONIENTE).  Menciona tu folio personalizado  FA00279 a nuestra ejecutiva de atención.Muestra tu identificación (INE) a nuestras ejecutivas de atención para corroborar tus datos. Completamos tu registro en tan solo unos minutos.  Si no sabes dónde nos encontramos o en qué horario atendemos, ¡escríbenos y te ayudamos!  ¡Te esperamos pronto! 'Acercándote cada vez más' Saludos,"
 
 #establecer pausa entre comandos de pyautogui
 pyautogui.PAUSE = 5
