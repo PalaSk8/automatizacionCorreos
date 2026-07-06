@@ -29,7 +29,7 @@ try:
         
         # Si es uno solo, déjalo así: "tu_jefe@flecharoja.com.mx"
         # Si son varios, sepáralos por comas: "correo1@test.com, correo2@test.com"
-        correos_ocultos = "omar.padilla@flecharoja.com.mx, jessica.perez@flecharoja.com.mx, efsoto@cemcomx.com, flechamigo@flecharoja.com.mx"
+        correos_ocultos = "omar.padilla@flecharoja.com.mx, efsoto@cemcomx.com, flechamigo@flecharoja.com.mx"
         #"omar.padilla@flecharoja.com.mx, jessica.perez@flecharoja.com.mx, efsoto@cemcomx.com, flechamigo@flecharoja.com.mx, eduardo.macedo@flecharoja.com.mx"
         # OJO: Usamos 'related' para que el correo entienda que lleva imágenes incrustadas
         msg = MIMEMultipart('related')
@@ -61,13 +61,16 @@ try:
 
             <br>Concluir tu registro es muy sencillo:<br>
 
-            <br><strong>Visita nuestro módulo de atención.
-            Menciona tu folio personalizado.
-            Presenta tu identificación oficial (INE) para validar tus datos.
-            En pocos minutos finalizamos tu registro y recibirás tu kit de bienvenida.</strong><br>
+            <strong>
+            <p>Visita nuestro módulo de atención.</p>
+            <p>Menciona tu folio personalizado.</p>
+            <p>Presenta tu identificación oficial (INE) para validar tus datos.</p>
+            <p>En pocos minutos finalizamos tu registro y recibirás tu kit de bienvenida.</p>
+            </strong>
 
             <br>¿No sabes dónde se encuentra nuestro módulo o cuáles son nuestros horarios de atención?
-            ¡Escríbenos y con gusto te ayudaremos!<br>
+            <strong>Nos encontramos en Terminal Poniente Observatorio y Terminal Toluca, con un horario de Lunes a Viernes de 09:30 am a 06:00 pm y Sábados de 10:00 am a 02.00pm</strong><br>
+            <p><em>*Sujeto a cambios sin previo aviso.</em></p>
 
             <br><strong>Recuerda: tienes hasta el 31 de Agosto de 2026 para concluir tu registro y obtener tu kit de bienvenida.</strong><br>
 
@@ -84,10 +87,9 @@ try:
             <img src="cid:imagen_banner" alt="Banner Flechamigo" style="max-width: 100%; height: auto;">
             
             
-            <p><strong>Si no sabes dónde nos encontramos o en qué horario atendemos, ¡escríbenos y te ayudamos!</strong></p>
+            <p><strong>Si no sabes en qué horario atendemos, Comunícate a nuestro número de atención al cliente: 55 1555 9519 o escríbenos por nuestras redes sociales.</strong></p>
             <p>¡Te esperamos pronto!<br>
             <em>'Acercándote cada vez más'</em><br>
-            Saludos,</p>
           </body>
         </html>
         """
